@@ -1,0 +1,27 @@
+name: Python application test with Github Actions
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.7
+    - name: Install dependencies
+      run: |
+        make -f Makefile install
+    - name: Install linter and test libraries
+      run: |
+        make -f Makefile setup
+    - name: Lint with pylint
+      run: |
+        make -f Makefile lint
+    - name: Test with pytest
+      run: |
+        make -f Makefile test load-test
