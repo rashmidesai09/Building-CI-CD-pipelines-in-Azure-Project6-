@@ -10,7 +10,7 @@ pool: $(poolName)
 
 variables:
   # TODO: Replace the service connection name
-  azureServiceConnectionId: 'spServiceConnection'
+  azureServiceConnectionId: 'flaskml'
   
   # TODO: Replace 'mywebapp193576' with the existing Web App name
   webAppName: '$(webServiceAppName)'
