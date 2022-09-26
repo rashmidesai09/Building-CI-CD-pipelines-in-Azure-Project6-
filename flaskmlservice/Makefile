@@ -1,6 +1,6 @@
 setup:
-	python3.7 -m venv .udacity-devops && \
-	. .udacity-devops/bin/activate
+	python3.7 -m venv .flaskmlservice && \
+	. .flaskmlservice/bin/activate
 	python3.7 -m pip install pylint pytest
 	python3.7 -m pip list
 install:
