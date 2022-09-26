@@ -9,7 +9,8 @@ install:
 		pip install locust && \
 		pip install locust-plugins
 test:
-	python3.7 -m pytest -vv tests/*.py -p no:warnings
+	python3.7 -m pytest -vv test_hello.py
+	python 
 
 load-test:
 	nohup timeout 60 python3.7 app.py &
