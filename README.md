@@ -41,6 +41,8 @@ Port: 443
 ## Enhancements
 
 1.Direct deployment from GitHub Actions to Azure WebApp Service
+2.Adding more test cases to improve the application
+3.Creating a UI for making predictions
 
 ## Demo 
 https://youtu.be/wguLb4Mp1Uk
