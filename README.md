@@ -8,8 +8,9 @@ In this project, I have build a Github repository from scratch and created a sca
 ## Project Plan
 Here is the link to the Trello board - https://trello.com/invite/b/VtOt4mwf/3046b515ba585b4fb042099e43a46929/project-management
 
-Here is the link to the spreadsheet that includes project -
-[Azure CI_CD Pipeline Project Estimates.xlsx](https://github.com/rashmidesai09/Project6/files/9653055/Azure.CI_CD.Pipeline.Project.Estimates.xlsx)
+Here is the link to the spreadsheet that includes project - [Azure CI_CD Pipeline Project Estimates1.xlsx](https://github.com/rashmidesai09/Project6/files/9659259/Azure.CI_CD.Pipeline.Project.Estimates1.xlsx)
+
+
 
 
 ## Instructions
@@ -45,11 +46,24 @@ Successful deploy of the project in Azure Pipelines
 
 ![build stage ](https://user-images.githubusercontent.com/97893144/192558661-565c237a-8f47-4b6f-9f9c-21fb98ae5346.jpg)
 
+Application running against a load test with locust
+![locust](https://user-images.githubusercontent.com/97893144/192624870-328820d6-c784-4324-9da9-abf3726ac8a4.jpg)
+
+![locust load test](https://user-images.githubusercontent.com/97893144/192624883-7458661f-4cbe-482f-b9bd-b9c245921147.jpg)
+
 ![build stage and deploy](https://user-images.githubusercontent.com/97893144/192558798-b6cb7f85-0417-483e-a366-1790453124c5.jpg)
 
 ![build stage and deploy web app successful](https://user-images.githubusercontent.com/97893144/192558737-655ef8a0-ea23-4909-8b75-d64dded081b4.jpg)
 
+Azure webapp screenshot
+![webapp screenshot](https://user-images.githubusercontent.com/97893144/192625092-07773f22-9d7b-4d93-829c-6cfcf2547c6a.jpg)
+
 Output of streamed log files from deployed application - https://mywebapp10021990.scm.azurewebsites.net/api/logs/docker
+![stream log](https://user-images.githubusercontent.com/97893144/192625021-608513f0-f09c-47e0-8988-dfb0ad761971.jpg)
+
+CD with Azure pipelines after making changes in app.py
+![after changes](https://user-images.githubusercontent.com/97893144/192625245-2b6f5a93-c7c2-4dea-88e0-90d269dbcfce.jpg)
+
 
 ## Enhancements
 
@@ -58,6 +72,6 @@ Output of streamed log files from deployed application - https://mywebapp1002199
 3.Creating a UI for making predictions
 
 ## Demo 
-https://youtu.be/wguLb4Mp1Uk
+https://youtu.be/CA0Lrr52S-w
 
 
