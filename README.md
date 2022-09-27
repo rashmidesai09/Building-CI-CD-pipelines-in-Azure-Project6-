@@ -1,5 +1,5 @@
 
-![Github Actions Build Status](https://github.com/rashmidesai09/Project6/actions/workflows/azure-pipelines.yml/badge.svg)
+![Github Actions Build Status](https://github.com/rashmidesai09/Project6/actions/workflows/main.yml/badge.svg)
 
 # Overview
 
