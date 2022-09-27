@@ -1,3 +1,6 @@
+
+![Github Actions Build Status](https://github.com/rashmidesai09/Project6/actions/workflows/main.yml/badge.svg)
+
 # Overview
 
 In this project, I have build a Github repository from scratch and created a scaffolding that assisted in performing both Continuous Integration and Continuous Delivery. I have used Github Actions along with a Makefile, requirements.txt and application code to perform an initial lint, test, and install cycle and integrated this project with Azure Pipelines to enable Continuous Delivery to Azure App Service. As part of this project a pre-trained, sklearn model has been provided that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home.
