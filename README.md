@@ -29,13 +29,10 @@ Passing tests that are displayed after running the `make all` command from the `
 
 <img width="790" alt="image" src="https://user-images.githubusercontent.com/97893144/192556009-dfc63fff-10ae-4a57-9913-12cc20ca5093.png">
 
-![4 local test passed screenshot](https://user-images.githubusercontent.com/97893144/192556287-eb6f9805-40b3-41ff-ad5f-aec7502af52a.jpg)
+![2 local tests on azure cloud shell](https://user-images.githubusercontent.com/97893144/192625823-697a771a-4a87-4dcf-8484-1f841813218d.jpg)
 
-![5 local test passed screenshot1](https://user-images.githubusercontent.com/97893144/192556322-1d1b3f05-0efa-48f0-81b3-7b99a727769d.jpg)
+![main yml ](https://user-images.githubusercontent.com/97893144/192626027-6102ddec-2fd6-46aa-bc55-c44694aa0bd4.jpg)
 
-![6 verify remote tests](https://user-images.githubusercontent.com/97893144/192556346-0c7dc23e-e70e-4b8c-bff4-9384b39cfb6e.jpg)
-
-Please note that the Github repo was later renamed as Project6
 
 ![image](https://user-images.githubusercontent.com/97893144/192557562-b0ec2f9d-24ed-4c0e-94f0-521614f30b56.png)
 
