@@ -1,12 +1,10 @@
 # Overview
 
-<TODO: complete this with an overview of your project>
+In this project, I have build a Github repository from scratch and created a scaffolding that assisted in performing both Continuous Integration and Continuous Delivery. I have used Github Actions along with a Makefile, requirements.txt and application code to perform an initial lint, test, and install cycle and integrated this project with Azure Pipelines to enable Continuous Delivery to Azure App Service. As part of this project a pre-trained, sklearn model has been provided that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home.
 
 ## Project Plan
-<TODO: Project Plan
-
-* A link to a Trello board for the project
-* A link to a spreadsheet that includes the original and final project plan>
+https://trello.com/invite/b/VtOt4mwf/3046b515ba585b4fb042099e43a46929/project-management
+A link to a spreadsheet that includes the original and final project plan can be found in the repository itself.
 
 ## Instructions
 
@@ -42,10 +40,9 @@ Port: 443
 
 ## Enhancements
 
-<TODO: A short description of how to improve the project in the future>
+1.Direct deployment from GitHub Actions to Azure WebApp Service
 
 ## Demo 
-
-<TODO: Add link Screencast on YouTube>
+https://youtu.be/wguLb4Mp1Uk
 
 
