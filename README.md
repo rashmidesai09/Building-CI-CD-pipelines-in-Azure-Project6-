@@ -17,30 +17,36 @@ In the Continuous Delivery step, the repository on GitHub is connected with Azur
 Confirmation that the deployment worked successfully is done by making a POST request, by passing input parameters in JSON and receiving a prediction response.
 The shell script is responsible for sending some input data to the application via the appropriate port. Each numerical value represents some feature that is important for determining the price of a house in Boston. The source code is responsible for passing that data through a trained, machine learning model, and giving back a predicted value for the house price.
 
-* Project running on Azure App Service
+Project succesfully cloned into Azure cloud shell
+<img width="700" alt="image" src="https://user-images.githubusercontent.com/97893144/192559986-5f76c15f-6887-4b8b-8aab-ccca95788e46.png">
 
-* Project cloned into Azure Cloud Shell
+Passing tests that are displayed after running the `make all` command from the `Makefile`
+![image](https://user-images.githubusercontent.com/97893144/192557041-eb5b2f8c-7ef7-4c36-9d72-d558b1a986d0.png)
 
-* Passing tests that are displayed after running the `make all` command from the `Makefile`
+<img width="790" alt="image" src="https://user-images.githubusercontent.com/97893144/192556009-dfc63fff-10ae-4a57-9913-12cc20ca5093.png">
 
-* Output of a test run
+![4 local test passed screenshot](https://user-images.githubusercontent.com/97893144/192556287-eb6f9805-40b3-41ff-ad5f-aec7502af52a.jpg)
 
-* Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
+![5 local test passed screenshot1](https://user-images.githubusercontent.com/97893144/192556322-1d1b3f05-0efa-48f0-81b3-7b99a727769d.jpg)
 
-* Running Azure App Service from Azure Pipelines automatic deployment
+![6 verify remote tests](https://user-images.githubusercontent.com/97893144/192556346-0c7dc23e-e70e-4b8c-bff4-9384b39cfb6e.jpg)
 
-* Successful prediction from deployed flask app in Azure Cloud Shell.  [Use this file as a template for the deployed prediction](https://github.com/udacity/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C2-AgileDevelopmentwithAzure/project/starter_files/flask-sklearn/make_predict_azure_app.sh).
-The output should look similar to this:
+Please note that the Github repo was later renamed as Project6
 
-```bash
-udacity@Azure:~$ ./make_predict_azure_app.sh
-Port: 443
-{"prediction":[20.35373177134412]}
-```
+![image](https://user-images.githubusercontent.com/97893144/192557562-b0ec2f9d-24ed-4c0e-94f0-521614f30b56.png)
 
-* Output of streamed log files from deployed application
+Successful prediction from deployed flask app in Azure Cloud Shell. 
+ Project ![prediction value 20 35](https://user-images.githubusercontent.com/97893144/192558429-49a5fea2-1d49-4425-ba65-98de63f1d048.jpg)
+ 
+Successful deploy of the project in Azure Pipelines
 
-> 
+![build stage ](https://user-images.githubusercontent.com/97893144/192558661-565c237a-8f47-4b6f-9f9c-21fb98ae5346.jpg)
+
+![build stage and deploy](https://user-images.githubusercontent.com/97893144/192558798-b6cb7f85-0417-483e-a366-1790453124c5.jpg)
+
+![build stage and deploy web app successful](https://user-images.githubusercontent.com/97893144/192558737-655ef8a0-ea23-4909-8b75-d64dded081b4.jpg)
+
+Output of streamed log files from deployed application - https://mywebapp10021990.scm.azurewebsites.net/api/logs/docker
 
 ## Enhancements
 
