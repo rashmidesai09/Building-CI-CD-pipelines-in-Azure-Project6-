@@ -61,6 +61,11 @@ locust -f locustfile.py --headless -u 10 -r 1 -H http://localhost:5000 -t 50s --
 ## Azure webapp screenshot
 ![webapp screenshot](https://user-images.githubusercontent.com/97893144/192625092-07773f22-9d7b-4d93-829c-6cfcf2547c6a.jpg)
 
+## Azure app service screenshot is as below -
+
+<img width="1118" alt="image" src="https://user-images.githubusercontent.com/97893144/192681501-92b45e56-3f8a-4d8c-b983-4e1e6a6334f1.png">
+
+
 Output of streamed log files from deployed application - https://mywebapp10021990.scm.azurewebsites.net/api/logs/docker
 ![stream log](https://user-images.githubusercontent.com/97893144/192625021-608513f0-f09c-47e0-8988-dfb0ad761971.jpg)
 
