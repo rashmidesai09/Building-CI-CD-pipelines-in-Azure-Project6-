@@ -6,7 +6,7 @@
 In this project, I have build a Github repository from scratch and created a scaffolding that assisted in performing both Continuous Integration and Continuous Delivery. I have used Github Actions along with a Makefile, requirements.txt and application code to perform an initial lint, test, and install cycle and integrated this project with Azure Pipelines to enable Continuous Delivery to Azure App Service. As part of this project a pre-trained, sklearn model has been provided that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home.
 
 ## Project Plan
-Here is the link to the Trello board - https://trello.com/invite/b/VtOt4mwf/3046b515ba585b4fb042099e43a46929/project-management
+Here is the link to the Trello board - https://trello.com/b/VtOt4mwf/building-ci-cd-pipelines
 
 Here is the link to the spreadsheet that includes project - [Azure CI_CD Pipeline Project Estimates1.xlsx](https://github.com/rashmidesai09/Project6/files/9659259/Azure.CI_CD.Pipeline.Project.Estimates1.xlsx)
 
@@ -21,7 +21,7 @@ In the Continuous Delivery step, the repository on GitHub is connected with Azur
 Confirmation that the deployment worked successfully is done by making a POST request, by passing input parameters in JSON and receiving a prediction response.
 The shell script is responsible for sending some input data to the application via the appropriate port. Each numerical value represents some feature that is important for determining the price of a house in Boston. The source code is responsible for passing that data through a trained, machine learning model, and giving back a predicted value for the house price.
 
-Project succesfully cloned into Azure cloud shell
+## Project succesfully cloned into Azure cloud shell
 <img width="700" alt="image" src="https://user-images.githubusercontent.com/97893144/192559986-5f76c15f-6887-4b8b-8aab-ccca95788e46.png">
 
 Passing tests that are displayed after running the `make all` command from the `Makefile`
@@ -36,23 +36,29 @@ Passing tests that are displayed after running the `make all` command from the `
 
 ![image](https://user-images.githubusercontent.com/97893144/192557562-b0ec2f9d-24ed-4c0e-94f0-521614f30b56.png)
 
-Successful prediction from deployed flask app in Azure Cloud Shell. 
+## Successful prediction from deployed flask app in Azure Cloud Shell. 
  Project ![prediction value 20 35](https://user-images.githubusercontent.com/97893144/192558429-49a5fea2-1d49-4425-ba65-98de63f1d048.jpg)
  
 Successful deploy of the project in Azure Pipelines
 
 ![build stage ](https://user-images.githubusercontent.com/97893144/192558661-565c237a-8f47-4b6f-9f9c-21fb98ae5346.jpg)
 
-Application running against a load test with locust
-![locust](https://user-images.githubusercontent.com/97893144/192624870-328820d6-c784-4324-9da9-abf3726ac8a4.jpg)
+## Application running against a load test with locust
 
-![locust load test](https://user-images.githubusercontent.com/97893144/192624883-7458661f-4cbe-482f-b9bd-b9c245921147.jpg)
+The Makefile has a step load-test that is run when calling make all, that runs locust, an application to load test webapps in headless mode.
+This command is run as
+locust -f locustfile.py --headless -u 10 -r 1 -H http://localhost:5000 -t 50s --check-fail-ratio 0.08 \ --only-summary
+
+<img width="818" alt="image" src="https://user-images.githubusercontent.com/97893144/192680713-ca505792-bfb0-4d08-ba4f-228b5bcec6cf.png">
+
+<img width="843" alt="image" src="https://user-images.githubusercontent.com/97893144/192680800-5a08d03c-27eb-48c4-a570-2059c9938378.png">
+
 
 ![build stage and deploy](https://user-images.githubusercontent.com/97893144/192558798-b6cb7f85-0417-483e-a366-1790453124c5.jpg)
 
 ![build stage and deploy web app successful](https://user-images.githubusercontent.com/97893144/192558737-655ef8a0-ea23-4909-8b75-d64dded081b4.jpg)
 
-Azure webapp screenshot
+## Azure webapp screenshot
 ![webapp screenshot](https://user-images.githubusercontent.com/97893144/192625092-07773f22-9d7b-4d93-829c-6cfcf2547c6a.jpg)
 
 Output of streamed log files from deployed application - https://mywebapp10021990.scm.azurewebsites.net/api/logs/docker
