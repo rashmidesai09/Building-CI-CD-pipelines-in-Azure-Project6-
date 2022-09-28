@@ -63,6 +63,7 @@ This diagram shows the continuous delivery of a flask application through the us
 The Flask app can be deployed on Azure app service manually by running the command. The app can then be tested in the Azure Cloud Shell environment by running make_predict_azure_app.sh.
 
 az webapp up --name mywebapp10021990 --resource-group azuredevops --runtime "PYTHON:3.7"
+
 bash make_predict_azure_app.sh
 
 ![prediction value 20 35](https://user-images.githubusercontent.com/97893144/192558429-49a5fea2-1d49-4425-ba65-98de63f1d048.jpg)
