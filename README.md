@@ -11,8 +11,6 @@ Here is the link to the Trello board - https://trello.com/b/VtOt4mwf/building-ci
 Here is the link to the spreadsheet that includes project - [Azure CI_CD Pipeline Project Estimates1.xlsx](https://github.com/rashmidesai09/Project6/files/9659259/Azure.CI_CD.Pipeline.Project.Estimates1.xlsx)
 
 
-
-
 ## Instructions
 Architectural Diagram 
 ![architectural diagram](https://user-images.githubusercontent.com/97893144/192469299-7bf7f2a8-ada1-400d-bc3a-0d187dfedc9e.png)
@@ -21,29 +19,59 @@ In the Continuous Delivery step, the repository on GitHub is connected with Azur
 Confirmation that the deployment worked successfully is done by making a POST request, by passing input parameters in JSON and receiving a prediction response.
 The shell script is responsible for sending some input data to the application via the appropriate port. Each numerical value represents some feature that is important for determining the price of a house in Boston. The source code is responsible for passing that data through a trained, machine learning model, and giving back a predicted value for the house price.
 
-## Project succesfully cloned into Azure cloud shell
+## Create the Cloud-Based Development Environment and succesfully clone the project into Azure cloud shell
+
+In this diagram, the Azure Cloud Shell is used to create an empty scaffold of tests, source code, Makefile, and requirements.
+<img width="440" alt="image" src="https://user-images.githubusercontent.com/97893144/192789206-565cc193-3884-492b-941b-e2d1feba7aee.png">
+
+Launch an Azure Cloud Shell environment and integrate Github repository communication.
+In the first step, code in GitHub is cloned into the Azure cloud shell environment, and the webapp is run in the Azure Cloud Shell environment.
+
 <img width="700" alt="image" src="https://user-images.githubusercontent.com/97893144/192559986-5f76c15f-6887-4b8b-8aab-ccca95788e46.png">
 
-Passing tests that are displayed after running the `make all` command from the `Makefile`
-![image](https://user-images.githubusercontent.com/97893144/192557041-eb5b2f8c-7ef7-4c36-9d72-d558b1a986d0.png)
+## Local Test
+
+A Makefile is a handy way to create shortcuts to build, test, and deploy a project.
+
+Below are the Passing tests that are displayed after running the `make all` command from the `Makefile`
 
 <img width="790" alt="image" src="https://user-images.githubusercontent.com/97893144/192556009-dfc63fff-10ae-4a57-9913-12cc20ca5093.png">
 
 ![2 local tests on azure cloud shell](https://user-images.githubusercontent.com/97893144/192625823-697a771a-4a87-4dcf-8484-1f841813218d.jpg)
 
+## CI: Configure GitHub Actions
+
+Configure GitHub Actions to test the project upon change events in GitHub. This is a necessary step to perform Continuous Integration remotely.
+
+Configuring a SaaS build server like GitHub Actions is an essential step for any software project that wants to apply DevOps best practices. This completes the final section of Continous Integration and enables us to then move on to the later step of Continuous Delivery once this is complete.
+
+This diagram shows how code can be tested automatically by enabling GitHub Actions. The push change to GitHub triggers the GitHub Actions container, which in turn runs a series of commands.
+
+![image](https://user-images.githubusercontent.com/97893144/192557041-eb5b2f8c-7ef7-4c36-9d72-d558b1a986d0.png)
+
+See below screenshot for remote testing of code and finalized CI through GitHub Actions.
 ![main yml ](https://user-images.githubusercontent.com/97893144/192626027-6102ddec-2fd6-46aa-bc55-c44694aa0bd4.jpg)
 
+## Continuous Delivery on Azure
+
+This diagram shows the continuous delivery of a flask application through the use of Azure Pipelines and Azure App service.
 
 ![image](https://user-images.githubusercontent.com/97893144/192557562-b0ec2f9d-24ed-4c0e-94f0-521614f30b56.png)
 
-## Successful prediction from deployed flask app in Azure Cloud Shell. 
- Project ![prediction value 20 35](https://user-images.githubusercontent.com/97893144/192558429-49a5fea2-1d49-4425-ba65-98de63f1d048.jpg)
+### Successful prediction from deployed flask app in Azure Cloud Shell. 
+
+The Flask app can be deployed on Azure app service manually by running the command. The app can then be tested in the Azure Cloud Shell environment by running make_predict_azure_app.sh.
+
+az webapp up --name mywebapp10021990 --resource-group azuredevops --runtime "PYTHON:3.7"
+bash make_predict_azure_app.sh
+
+![prediction value 20 35](https://user-images.githubusercontent.com/97893144/192558429-49a5fea2-1d49-4425-ba65-98de63f1d048.jpg)
  
-Successful deploy of the project in Azure Pipelines
+### Successful deploy of the project in Azure Pipelines
 
 ![build stage ](https://user-images.githubusercontent.com/97893144/192558661-565c237a-8f47-4b6f-9f9c-21fb98ae5346.jpg)
 
-## Application running against a load test with locust
+### Application running against a load test with locust
 
 The Makefile has a step load-test that is run when calling make all, that runs locust, an application to load test webapps in headless mode.
 This command is run as
@@ -51,25 +79,26 @@ locust -f locustfile.py --headless -u 10 -r 1 -H http://localhost:5000 -t 50s --
 
 <img width="818" alt="image" src="https://user-images.githubusercontent.com/97893144/192680713-ca505792-bfb0-4d08-ba4f-228b5bcec6cf.png">
 
+After finishing the load test, locust will display summary statistics -
+
 <img width="843" alt="image" src="https://user-images.githubusercontent.com/97893144/192680800-5a08d03c-27eb-48c4-a570-2059c9938378.png">
 
-
+The output of a GitHub Actions pipeline run is shown below -
 ![build stage and deploy](https://user-images.githubusercontent.com/97893144/192558798-b6cb7f85-0417-483e-a366-1790453124c5.jpg)
 
 ![build stage and deploy web app successful](https://user-images.githubusercontent.com/97893144/192558737-655ef8a0-ea23-4909-8b75-d64dded081b4.jpg)
 
-## Azure webapp screenshot
+### Azure webapp screenshot
 ![webapp screenshot](https://user-images.githubusercontent.com/97893144/192625092-07773f22-9d7b-4d93-829c-6cfcf2547c6a.jpg)
 
-## Azure app service screenshot is as below -
+### Azure app service screenshot
 
 <img width="1118" alt="image" src="https://user-images.githubusercontent.com/97893144/192681501-92b45e56-3f8a-4d8c-b983-4e1e6a6334f1.png">
 
-
-Output of streamed log files from deployed application - https://mywebapp10021990.scm.azurewebsites.net/api/logs/docker
+### Output of streamed log files from deployed application - https://mywebapp10021990.scm.azurewebsites.net/api/logs/docker
 ![stream log](https://user-images.githubusercontent.com/97893144/192625021-608513f0-f09c-47e0-8988-dfb0ad761971.jpg)
 
-CD with Azure pipelines after making changes in app.py
+### CD with Azure pipelines after making changes in app.py
 ![after changes](https://user-images.githubusercontent.com/97893144/192625245-2b6f5a93-c7c2-4dea-88e0-90d269dbcfce.jpg)
 
 
