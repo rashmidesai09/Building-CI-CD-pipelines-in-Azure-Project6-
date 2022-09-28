@@ -80,6 +80,6 @@ CD with Azure pipelines after making changes in app.py
 3.Creating a UI for making predictions
 
 ## Demo 
-https://youtu.be/CA0Lrr52S-w
+https://www.youtube.com/watch?v=CA0Lrr52S-w
 
 
